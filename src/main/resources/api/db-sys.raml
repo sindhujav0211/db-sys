@@ -1,0 +1,62 @@
+#%RAML 1.0
+title: DB-sys
+
+/dbcreate:
+  post:
+    body:
+      application/json:
+        example: !include Example/dbexample.raml
+    responses:
+      201:
+        body:
+          application/json:
+            example:
+              {
+                "message":"Created successfully"
+              }
+
+/dbselect:
+  get:
+    queryParameters:
+      PersonID:
+        type: integer
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include Example/dbexample.raml
+
+/dbupdate:
+  put:
+    body:
+      application/json:
+        example:
+          {
+            "PersonID": "50632296",
+            "City": "Jonesboro"
+          }
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+                "message": "Updated successfully"
+              }
+
+/dbdelte:
+  delete:
+    body:
+      application/json:
+        example:
+          {
+            "PersonID": "123445"
+          }
+    responses:
+      202:
+        body:
+          application/json:
+            example:
+              {
+                "Message": "Deleted successfully"
+              }
