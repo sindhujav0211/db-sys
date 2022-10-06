@@ -10,7 +10,7 @@ http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/cu
 	<flow name="DB-createFlow" doc:id="e1566616-df7e-499a-8e3e-5c8c5170d13a" >
 		<set-variable value="#[payload.City]" doc:name="Set Variable" doc:id="4aae6554-0c77-427a-969c-b0074eea4d14" variableName="City"/>
 		<logger level="INFO" doc:name="Logger" doc:id="1d496f05-db5e-4505-8c1c-ff0909a32d96" message="#[vars.City]"/>
-		<logger level="INFO" doc:name="Logger" doc:id="f798eb7e-dc71-4fc8-a05b-7bb82c2add28" message="calling database logger"/>
+		<logger level="INFO" doc:name="Logger" doc:id="f798eb7e-dc71-4fc8-a05b-7bb82c2add28" message="calling database"/>
 		<db:insert doc:name="Insert" doc:id="5d34e2d3-3e92-41a5-82e7-53ab30eab8b0" config-ref="Azure-Database_Config">
 			<db:sql ><![CDATA[INSERT INTO test(Name, PersonID, Address, City)
 VALUES (:name, :pid, :add, :city);]]></db:sql>
