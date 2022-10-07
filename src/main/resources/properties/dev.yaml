@@ -1,0 +1,6 @@
+db:
+ host: "sindhu.database.windows.net"
+ port: "1433"
+ user: "sindhu" 
+ password: "P@yasam123" 
+ databaseName: "sindhu123"
