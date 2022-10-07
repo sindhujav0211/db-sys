@@ -78,6 +78,7 @@ jobs:
         mvn deploy -DmuleDeploy \
          -Dmule.artifact=$artifactName \
          -Danypoint.muleVersion=4.4.0 \
+         -Dmule.env=dev \
          -Danypoint.username="$USERNAME" \
          -Danypoint.password="$PASSWORD" \
          -DskipTests
